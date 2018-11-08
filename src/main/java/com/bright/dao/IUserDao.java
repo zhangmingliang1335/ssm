@@ -2,6 +2,8 @@ package com.bright.dao;
 
 import com.bright.model.User;
 
+import java.util.List;
+
 public interface IUserDao {
-    User selectUser(long id);
+    List<User> selectUser(String name);
 }

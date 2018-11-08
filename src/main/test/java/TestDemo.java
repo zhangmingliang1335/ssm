@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring-mybatis.xml")
 public class TestDemo {
@@ -13,7 +15,7 @@ public class TestDemo {
     private IUserDao iUserDao;
     @Test
     public void test(){
-        User user = iUserDao.selectUser(1);
-        System.out.println(user.getUsername());
+        List<User> user = iUserDao.selectUser("bright");
+        System.out.println(user);
     }
 }

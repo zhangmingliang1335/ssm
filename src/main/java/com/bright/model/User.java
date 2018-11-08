@@ -12,6 +12,20 @@ public class User {
     private Date regTime;
     private String regIp;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
+                ", role='" + role + '\'' +
+                ", status=" + status +
+                ", regTime=" + regTime +
+                ", regIp='" + regIp + '\'' +
+                '}';
+    }
+
     public long getId() {
         return id;
     }
